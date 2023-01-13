@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Macro_Image" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNc-Zf-nsS" customClass="MacroView" customModule="Macro_Image" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="133.66666666666663" width="390" height="390"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hNc-Zf-nsS" secondAttribute="height" multiplier="1:1" id="NEb-al-nve"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEW-Oh-Usf">
+                                <rect key="frame" x="16" y="552.66666666666663" width="156" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change BG Color"/>
+                                <connections>
+                                    <action selector="changeBGColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTz-uW-AKU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-Ce-T2s">
+                                <rect key="frame" x="283" y="618.66666666666663" width="91" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Text"/>
+                                <connections>
+                                    <action selector="addTextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhx-oe-UeD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3C-KG-XX0">
+                                <rect key="frame" x="228" y="552.66666666666663" width="146" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Apply B/W Filter"/>
+                                <connections>
+                                    <action selector="applyFilterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98f-ED-1Sx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Something..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="geP-Ex-bC3">
+                                <rect key="frame" x="16" y="614" width="243" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1Sa-NL-Itp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rN6-48-Xce">
+                                <rect key="frame" x="16" y="688" width="106" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Image"/>
+                                <connections>
+                                    <action selector="addImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5T-WW-PkO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUu-Mk-KLV">
+                                <rect key="frame" x="255" y="688" width="119" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share Image"/>
+                                <connections>
+                                    <action selector="shareImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t26-DX-Vj8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e4x-Ce-T2s" secondAttribute="trailing" constant="16" id="4he-ah-9I5"/>
+                            <constraint firstItem="geP-Ex-bC3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8zQ-jc-ZuF"/>
+                            <constraint firstItem="pEW-Oh-Usf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BLo-ji-Jyd"/>
+                            <constraint firstItem="e4x-Ce-T2s" firstAttribute="centerY" secondItem="geP-Ex-bC3" secondAttribute="centerY" id="HOA-EN-qzS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hNc-Zf-nsS" secondAttribute="trailing" id="KSv-Fm-Q4l"/>
+                            <constraint firstItem="rN6-48-Xce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Trm-AX-aOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i3C-KG-XX0" secondAttribute="trailing" constant="16" id="U0l-6O-n1B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OUu-Mk-KLV" secondAttribute="trailing" constant="16" id="U3e-LZ-WcO"/>
+                            <constraint firstItem="rN6-48-Xce" firstAttribute="top" secondItem="geP-Ex-bC3" secondAttribute="bottom" constant="30" id="VdX-MH-aLq"/>
+                            <constraint firstItem="i3C-KG-XX0" firstAttribute="top" secondItem="hNc-Zf-nsS" secondAttribute="bottom" constant="29.329999999999998" id="amx-UH-Q66"/>
+                            <constraint firstItem="hNc-Zf-nsS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="bfV-ID-IR3"/>
+                            <constraint firstItem="geP-Ex-bC3" firstAttribute="top" secondItem="pEW-Oh-Usf" secondAttribute="bottom" constant="26.329999999999998" id="mza-Vh-rlB"/>
+                            <constraint firstItem="e4x-Ce-T2s" firstAttribute="leading" secondItem="geP-Ex-bC3" secondAttribute="trailing" constant="24" id="opo-jk-xjM"/>
+                            <constraint firstItem="OUu-Mk-KLV" firstAttribute="top" secondItem="rN6-48-Xce" secondAttribute="top" id="pRP-l2-LAZ"/>
+                            <constraint firstItem="hNc-Zf-nsS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qqL-XH-ame"/>
+                            <constraint firstItem="pEW-Oh-Usf" firstAttribute="top" secondItem="hNc-Zf-nsS" secondAttribute="bottom" constant="29.329999999999998" id="wcG-hn-MjU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addImageButton" destination="rN6-48-Xce" id="bMP-UM-huu"/>
+                        <outlet property="addTextButton" destination="e4x-Ce-T2s" id="NVc-JX-Tmx"/>
+                        <outlet property="applyFilterButton" destination="i3C-KG-XX0" id="HLW-jX-JPw"/>
+                        <outlet property="changeBGColorButton" destination="pEW-Oh-Usf" id="ahP-A5-Grs"/>
+                        <outlet property="macroView" destination="hNc-Zf-nsS" id="xpP-ZJ-y8w"/>
+                        <outlet property="textField" destination="geP-Ex-bC3" id="Vwa-Lm-Cmu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
